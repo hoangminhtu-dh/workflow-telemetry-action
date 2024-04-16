@@ -49,7 +49,7 @@ async function getCurrentJob(): Promise<WorkflowJobType | null> {
       if (currentJob && currentJob.id) {
         return currentJob
       }
-      await new Promise(r => setTimeout(r, 1000))
+      await new Promise(r => setTimeout(r, 10000))
     }
   } catch (error: any) {
     logger.error(
